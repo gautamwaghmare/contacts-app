@@ -13,3 +13,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Development server Back-End
 
 Run `npm run start:server` for dev node-express server
+
+## How it works
+
+You can see all contacts. But to add, edit or delete contact, you should be authenticated and authorised.
