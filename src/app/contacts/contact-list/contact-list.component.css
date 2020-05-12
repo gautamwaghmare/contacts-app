@@ -1,0 +1,64 @@
+:host {
+    display: block;
+    margin-top: 1rem;
+}
+
+.info-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+mat-spinner {
+    margin: auto;
+}
+
+mat-paginator {
+    margin-top: 1rem;
+}
+
+.panel-body {
+    display: flex;
+    width: 100%;
+}
+
+.imgdiv {
+    width: 30%;
+}
+
+.imgdiv img {
+    width: 120px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+table, th, td {
+    text-align: left;
+}
+
+.address {
+    word-wrap: break-all;
+    overflow-wrap: break-word;
+}
+
+.status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: rgb(255, 58, 58);
+}
+
+.green {
+    background-color: #60D156;
+}
+
+@media screen and (max-width: 705px) {
+    .panel-body {
+        flex-direction: column;
+    }
+}

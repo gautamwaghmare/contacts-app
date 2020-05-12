@@ -1,0 +1,58 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSaveContact(contactForm)" #contactForm="ngForm" *ngIf="!isLoading">
+    <div class="flexForm">
+    <div class="mandatory">
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input #firstName="ngModel" [ngModel]="contact?.firstName" name="firstName" type="text" matInput placeholder="Enter your first name" required>
+        <mat-error *ngIf="firstName.invalid">Please enter a first name</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input #lastName="ngModel" [ngModel]="contact?.lastName" name="lastName" type="text" matInput placeholder="Enter your last name" required>
+        <mat-error *ngIf="lastName.invalid">Please enter a last name</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Contact Number</mat-label>
+        <input #contactNumber="ngModel" [ngModel]="contact?.contactNumber" name="contactNumber" type="number" matInput placeholder="Enter your contact number" required>
+        <mat-error *ngIf="contactNumber.invalid">Please enter a contact number</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" #email="ngModel" [ngModel]="contact?.email" name="email" matInput placeholder="Enter your email-id" required email>
+        <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select #status="ngModel" [ngModel]="contact?.status" name="status" required>
+          <mat-option [value]=true>Active</mat-option>
+          <mat-option [value]=false>Inactive</mat-option>
+        </mat-select>
+        <mat-error *ngIf="status.invalid">Please select a status</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="optional">
+      <mat-form-field>
+        <textarea [ngModel]="contact?.address" name="address" rows="4" matInput placeholder="Address"></textarea>
+      </mat-form-field>
+      <div>
+        <button type="button" mat-stroked-button (click)="filePicker.click()">Add Profile Pic</button>
+        <input type="file" #filePicker (change)="onImagePicked($event)">
+      </div>
+      <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+        <img name="image" [src]="imagePreview" alt="Profile Pic">
+      </div>
+    </div>
+  </div>
+
+    <button type="submit" mat-raised-button color="primary">
+      Save Contact
+    </button>
+  </form>
+</mat-card>

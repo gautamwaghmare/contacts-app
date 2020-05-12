@@ -1,0 +1,31 @@
+mat-form-field, input {
+    display: block;
+}
+
+mat-spinner {
+    margin: auto;
+}
+
+.flexForm {
+    display: flex;
+    width: 100%;
+}
+
+.mandatory, .optional {
+    width: 45%;
+    margin: 0 auto;
+    padding: auto;
+}
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 8rem;
+    margin: 1rem 1rem;
+}
+
+.image-preview img {
+    height: 100%;
+}
