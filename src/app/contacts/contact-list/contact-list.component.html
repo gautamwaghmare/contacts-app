@@ -16,15 +16,15 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>Contact :</th>
+                            <th>Contact:</th>
                             <td>{{contact.contactNumber}}</td>
                         </tr>
                         <tr>
-                            <th>Email :</th>
+                            <th>Email:</th>
                             <td>{{contact.email}}</td>
                         </tr>
                         <tr *ngIf="contact && contact.address">
-                            <th>Address :</th>
+                            <th>Address:</th>
                             <td class="address">{{contact && contact.address ? contact.address : ''}}</td>
                         </tr>
                     </tbody>

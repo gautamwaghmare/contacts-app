@@ -13,7 +13,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { ErrorInterceptor } from './error-interceptor';
-import { AngularMaterialModule } from 'src/angular-material.module';
+import { AngularMaterialModule } from 'src/app/angular-material.module';
 
 
 @NgModule({

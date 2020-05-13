@@ -29,3 +29,15 @@ input[type="file"] {
 .image-preview img {
     height: 100%;
 }
+
+@media screen and (max-width: 650px) {
+    .flexForm {
+        flex-direction: column;
+    }
+
+    .mandatory, .optional {
+        width: 100%;
+        margin: 0 auto;
+        padding: auto;
+    }
+}
